@@ -7,14 +7,10 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bcc-style.css">
-	<!-- JAVASCRIPT -->
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.mask.js"></script>
-	<script src="js/bcc-script.js"></script>
 </head>
 
 <body>

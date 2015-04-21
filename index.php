@@ -1,40 +1,5 @@
 <?php 
 	include_once 'header.php'; 
-
-	if (isset($_POST['send'])) {
-        $email_to = "hcicarelli@gmail.com";
-        $email_subject = "Jr.COM - Formulário de Contato";
-        
-        function died($error) {
-            echo "Lamentamos, mas algum(ns) erro(s) foram encontrados:<br /><br />";
-            echo $error."<br />";
-            die();  
-        }
-        
-        if (!isset($_POST['fullname']) ||
-            !isset($_POST['email']) ||
-            !isset($_POST['tel']) ||
-            !isset($_POST['empresa']) ||
-            !isset($_POST['mensagem'])) {
-            died("Lamentamos, mas parece que houve erros ao enviar o formulário");
-        }
-        
-        $name = $_POST['fullname'];
-        $email_from = $_POST['email'];
-        $telefone = $_POST['tel'];
-        $empresa = $_POST['empresa'];
-        $msg = $_POST['mensagem'];
-        
-        $email_message = "Detalhes do formulário abaixo. \n\n";
-        
-        $email_message .= "Nome Completo: ".$name."\n";
-        $email_message .= "Email: ".$email_from."\n";
-        $email_message .= "Telefone: ".$telefone."\n";
-        $email_message .= "Empresa/Instituição: ".$empresa."\n";
-        $email_message .= "Mensagem: ".$msg."\n";
-        
-        @mail($email_to, $email_subject, $email_message);
-    }
 ?>
 
 	
@@ -93,21 +58,20 @@
 
 	<section id="contato">
 		<h1>Contato</h1>
-        <form name="contato" id="contato" action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="inner_formulario">
-            <label class="lbl_formulario" for="fullname">Nome Completo</label> 
+        <form name="contato" id="contato" class="inner_formulario" action="" method="post">
+            <label class="lbl_formulario" for="fullname">Nome Completo*</label> 
             <input type="text" name="fullname" id="fullname" /> <br>
-            <label class="lbl_formulario" for="email">E-mail</label> 
+            <label class="lbl_formulario" for="email">E-mail*</label> 
             <input type="email" name="email" id="email" /> <br>
             <label class="lbl_formulario" for="telefone">Telefone</label> 
             <input type="text" name="tel" id="tel" maxlength="15" /> <br>
             <label class="lbl_formulario" for="empresa">Empresa/Instituição</label> 
             <input type="text" name="empresa" id="empresa" /> <br>
-            <label class="lbl_formulario" for="mensagem" style="vertical-align:top">Mensagem</label> 
+            <label class="lbl_formulario" for="mensagem" style="vertical-align:top">Mensagem*</label> 
             <textarea name="mensagem" id="mensagem" style="height: 100px;"></textarea> <br>
              
-            <input type="submit" name="send" value="Enviar" class="botao" />
+            <input type="submit" name="send" id="send-form" value="Enviar" class="botao" />
         </form>   
-	</section>
-	
+	</section>	
 
 <?php include_once 'footer.php'; ?>

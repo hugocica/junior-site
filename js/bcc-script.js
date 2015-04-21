@@ -13,33 +13,16 @@ $(document).ready(function() {
 		return false;
 	});	
 
+	$('#fullname').blur(function() {
+		validate($(this).val(), '#fullname');	
+	});
+
 	$('#email').blur(function() {
-		$.ajax({
-			url: 'function.php',
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				action: 'validateEmail',
-				email: $(this).val()
-			},
-			beforeSend: function() {
-				$('#email').css('background', 'url("img/ajax-loader.gif") #ccc no-repeat 98% 50%');
-				$('#email').css('outline', 'none');
-				$('.form-error').remove();
-			},
-			success: function(data) {
-				if (data.type == 'invalid') {
-					$('#email').after('<div class="form-error">E-mail inválido</div>');
-					$('#email').css('outline', '1px solid #cc0000');
-				} else if (data.type == 'blank') {
-					$('#email').after('<div class="form-error">E-mail em branco</div>');
-					$('#email').css('outline', '1px solid #cc0000');
-				}
-			},
-			complete: function() {
-				$('#email').css('background', '#ccc');
-			}
-		});		
+		validate($(this).val(), '#email');
+	});
+
+	$('#mensagem').blur(function() {
+		validate($(this).val(), '#mensagem');
 	});
 
 	$('#tel').mask('(99) 9999-9999?9', {placeholder: ' '});
@@ -48,6 +31,32 @@ $(document).ready(function() {
 			$('#tel').mask('(99) 99999-999?9', {placeholder: ' '});
 		}
 	});
+
+	$('#send-form').click(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: 'function.php',
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				action: 'sendEmail',
+				nome: $('#fullname').val(),
+				email: $('#email').val(),
+				telefone: $('#tel').val(),
+				empresa: $('#empresa').val(),
+				mensagem: $('#mensagem').val()
+			},
+			beforeSend: function() {
+
+			},
+			success: function(data) {
+				console.log(data);
+			},
+			complete: function() {
+
+			}
+		});
+	});	
 }); 
 
 $(document).scroll(function() {
@@ -59,3 +68,37 @@ $(document).scroll(function() {
 		$('.logo-img').removeClass('logo-large');
 	}
 });
+
+function validate(field_value, id_value) {
+	$.ajax({
+			url: 'function.php',
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				action: 'validateForm',
+				field: field_value,
+				fieldType: id_value
+			},
+			beforeSend: function() {
+				$(id_value).css('background', 'url("img/ajax-loader.gif") #ccc no-repeat 98% 50%');
+				$(id_value).css('outline', 'none');
+				$(id_value + '+ .form-error').remove();
+			},
+			success: function(data) {
+				if (data.type == 'invalid') {
+					$(id_value).after('<div class="form-error">Campo inválido</div>');
+					$(id_value).css('outline', '1px solid #cc0000');
+					$('#send-form').attr('disabled', 'disabled');
+				} else if (data.type == 'blank') {
+					$(id_value).after('<div class="form-error">Campo em branco</div>');
+					$(id_value).css('outline', '1px solid #cc0000');
+					$('#send-form').attr('disabled', 'disabled');
+				}
+			},
+			complete: function() {
+				$(id_value).css('background', '#ccc');
+				if ($('.form-error').length == 0)
+					$('#send-form').removeAttr('disabled');
+			}
+		});		
+}
