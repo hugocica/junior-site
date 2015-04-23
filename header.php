@@ -11,6 +11,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bcc-style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive-tablet.css">
 </head>
 
 <body>
