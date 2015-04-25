@@ -78,7 +78,7 @@ $(document).ready(function() {
 			},
 			complete: function() {
 				$('#contato_form').remove();
-				$('#message-placeholder').hide().append('<div id="thanks"><img src="img/laptop.png"><div id="thank-txt"><p>Obrigado por entrar em contato conosco!</p><p>A Jr.COM agradece.</p></div></div>').slideDown('fast');
+				$('#message-placeholder').hide().append('<div id="thanks"><img src="img/laptop.png"><div id="thank-txt"><p>Obrigado por entrar em contato conosco!</p><p>A Jr.COM agradece.</p></div></div>').slideDown('slow');
 			}
 		});
 	});	
