@@ -1,10 +1,7 @@
 	body {
-		font-family: 'Roboto';
+		font-family: 'Arvo';
 		font-size: 14px;
 		position: relative;
-	}
-	h1, h2, h3, h4, h5, h6, footer p, header {
-		font-family: 'Arvo';
 	}
 	p {
 		letter-spacing: .3pt;
@@ -15,7 +12,7 @@
 
 /*#####################  BARRA DE NAVEGAÇÃO #########################*/
 
-	header.top-navbar {
+	div.top-navbar {
 		position: fixed;
 		z-index: 9999;
 	}
@@ -138,7 +135,7 @@
 		margin: 0 auto;
 	}
 	div.inner-wrapper > section {
-		min-height: 342px;
+		min-height: 470px;
 		border-bottom: 1px solid #1E253A;
 		padding-bottom: 50px;
 		margin-bottom: 50px;
@@ -149,18 +146,13 @@
 
 /*###################### FORMULARIOS ###################################*/
 
-	#contato h2 {
+	#contato h1 {
 		margin-bottom: 20px;
-	}
-	#processo-seletivo h2 {
-		margin-bottom: 50px;
-		padding-bottom: 25px;
-		border-bottom: 1px solid;
 	}
 	label {
 		width: 29%;
 	}
-	input, textarea, select {
+	input, textarea {
 		width: 70%;
 		margin-bottom: 15px;
 		height: 40px;
@@ -168,14 +160,10 @@
 		background-color: #ccc;
 		padding: 10px;
 	}
-	textarea {
-		resize: none;
-	}
 	#email {
 		box-shadow: none!important;
 	}
 	input[type="submit"] {
-		font-family: 'Arvo';
 		position: relative;
 		width: 125px;
 		left: calc(100% - 130px);

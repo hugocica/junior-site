@@ -1,12 +1,12 @@
 <?php
-
 $action = $_POST['action'];
 
-if ($action == 'validateForm') {
+if ($action == 'validateForm')
 	validateForm();
-} elseif ($action == 'sendEmail') {
+elseif ($action == 'sendEmail')
 	sendEmail();
-}
+elseif ($action == 'processoSeletivo')
+    processoSeletivo();
 
 function validateForm() {
 	$field = $_POST['field'];
@@ -21,7 +21,7 @@ function validateForm() {
 		die();
 	}
 
-    if ($type == 'email') {
+    if (in_array($type, array('email', 'email-candidato'))) {
         if (!preg_match('/^[^.0-9]*[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $field)) {
             $result['type'] = 'invalid';
             $result = json_encode($result);
@@ -102,5 +102,17 @@ function sendEmail() {
     $result = json_encode($result);
     echo $result;
     die();
+}
+
+function processoSeletivo() {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $curso = $_POST['curso'];
+    $ano = $_POST['ano'];
+    $sexo = $_POST['sexo'];
+    $resumo = $_POST['resumo'];
+
+    echo $nome . ' ' . $resumo . ' ' . $curso;
 }
 ?>

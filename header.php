@@ -7,6 +7,7 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,100italic,100,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,8 +15,12 @@
 	<link rel="stylesheet" type="text/css" href="css/responsive-tablet.css">
 </head>
 
+<script>
+	var processoSeletivo;
+</script>
+
 <body>
-	<div class="top-navbar navbar-fixed-top">
+	<header class="top-navbar navbar-fixed-top">
 		<div class="logo-img">
 			<a href="#"><img src="img/logo.png"></a>
 		</div>
@@ -30,14 +35,14 @@
 
 		<nav class="navbar-collapse collapse menu-spy jr-navbar">
 			<ul>
-				<li class="menu-itens"><a href="#inicio" title="">Início</a></li>
 				<li class="menu-itens"><a href="#empresa" title="">A Empresa</a></li>
 				<li class="menu-itens"><a href="#servicos" title="">Serviços</a></li>
 				<li class="menu-itens"><a href="#portifolio" title="">Portifólio</a></li>
+				<li class="menu-itens"><a href="#parceiros" title="">Parceiros</a></li>
 				<li class="menu-itens"><a href="#contato" title="">Contato</a></li>
 			</ul>
 		</nav>
-	</div>
+	</header>
 
 	<div class="wrapper">
 		<div class="inner-wrapper col-md-8">
