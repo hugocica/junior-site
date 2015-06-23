@@ -39,6 +39,7 @@
 
 			<input type="submit" name="send" id="processo-form" value="Enviar" class="botao" />
 		</form>
+		<div id="message-placeholder"></div>
 	</section>
 
 <?php include_once 'footer.php'; ?>

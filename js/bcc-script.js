@@ -8,8 +8,8 @@ $(document).ready(function() {
 
 	$('.logo-img > a').click(function() {
 		if (processoSeletivo)
-			window.location.href = "/junior-site";
-			// window.location.href = "http://compjr.com.br";
+			// window.location.href = "/junior-site";
+			window.location.href = "http://compjr.com.br";
 		else {
 			$('html, body').animate({
 			    scrollTop: 0
@@ -17,6 +17,24 @@ $(document).ready(function() {
 			return false;
 		}
 	});	
+
+	// parceiros dock
+	$("ul.osx-dock li").each(function (type) {
+     	$(this).hover(function () {
+      		$(this).prev("li").addClass("nearby");
+      		$(this).next("li").addClass("nearby");
+      		if ($(this).data('partner') == 'dijr')
+      			$('.info-container').hide().html('<img style="margin-right:15px;float:none;" src="img/parceiros/dijr-logo.png"><p style="margin: 45px 0;float:right;">Para conferir mais sobre acesse<br><a href="http://designjunior.com.br" target="_blank">designjunior.com.br</a></p>').fadeIn('fast');
+      		else if ($(this).data('partner') == 'loco')
+      			$('.info-container').hide().html('<img style="margin-right:15px;float:none;" src="img/parceiros/locomotiva-logo.png"><p style="margin: 45px 0;float:right;">Para conferir mais sobre acesse<br><a href="#">Locomotiva Site</a></p>').fadeIn('fast');
+      		else if ($(this).data('partner') == 'interage')
+      			$('.info-container').hide().html('<img style="margin-right:15px;float:none;" src="img/parceiros/interage-logo.png"><p style="margin: 45px 0;float:right;">Para conferir mais sobre acesse<br><a href="#">Interage Site</a></p>').fadeIn('fast');
+     	},
+     	function () {
+      		$(this).prev("li").removeClass("nearby");
+      		$(this).next("li").removeClass("nearby");
+     	});
+    });
 
 	// valida entradas do formulario
 	var check_name = false;
@@ -121,17 +139,18 @@ $(document).ready(function() {
 				} else if(data.type == 'error') {
 					$('#processo-form').after('<div class="form-error">Houve um erro no envio deste formulário. Por favor, tente novamente mais tarde.</div>');
 				} else if(data.type == 'blank') {
-					validate($('#fullname').val(), '#fullname');
-					validate($('#email').val(), '#email');
-					validate($('#mensagem').val(), '#mensagem');
+					validate($('#nome-candidato').val(), '#nome-candidato');
+					validate($('#email-candidato').val(), '#email-candidato');
 				}
+				console.log('success');
 			},
 			error: function(request, status, error) {
 				$('#processo-form').after('<div class="form-error">Houve um erro no envio deste formulário. Por favor, tente novamente mais tarde.</div>');
 			},
 			complete: function() {
-				$('#contato_form').remove();
-				$('#message-placeholder').hide().append('<div id="thanks"><img src="img/laptop.png"><div id="thank-txt"><p>Obrigado por entrar em contato conosco!</p><p>A Jr.COM agradece.</p></div></div>').slideDown('slow');
+				console.log('complete');
+				$('#processo_form').remove();
+				$('#message-placeholder').hide().append('<div id="thanks"><img src="img/laptop.png"><div id="thank-txt"><p>Obrigado por participar do nosso<br>Processo Seletivo 2015!</p><p>A Jr.COM agradece.</p></div></div>').slideDown('slow');
 			}
 		});
 	});

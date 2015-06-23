@@ -52,7 +52,27 @@
 
 	<section id="parceiros">
 		<h2>Parceiros</h2>
-		<div class="description-txt">
+		<div class="info-partners">
+			<div class="info-container">
+				<p style="position: relative;top: 20px;">Passe o mouse em cima do logo para descobrir mais sobre nossos parceiros.</p>
+			</div>
+		</div>
+		<div class="listing-partners">
+			<div id="dockContainer">
+				<div id="dockWrapper">
+					<ul class="osx-dock">
+						<li data-partner="dijr" class="active">
+							<a href="#"><img src="img/parceiros/dijr-logo-small.png" alt="designjuniot" /></a>
+						</li>
+						<li data-partner="loco">
+							<a href="#"><img src="img/parceiros/locomotiva-logo-small.png" alt="locomotiva" /></a>
+						</li>
+						<li data-partner="interage">
+							<a href="#"><img src="img/parceiros/interage-logo-small.png" alt="interage" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</section>
 
