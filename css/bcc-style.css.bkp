@@ -1,0 +1,204 @@
+	body {
+		font-family: 'Arvo';
+		font-size: 14px;
+		position: relative;
+	}
+	p {
+		letter-spacing: .3pt;
+	}
+	a:focus {
+		outline: none;
+	}
+
+/*#####################  BARRA DE NAVEGAÇÃO #########################*/
+
+	div.top-navbar {
+		position: fixed;
+		z-index: 9999;
+	}
+	div.logo-img {
+		position: inherit;
+		top: 10px;
+		left: calc(20% - 30px);
+		display: inline-block;
+		float: left;
+	}
+	div.logo-img > a > img {
+		width: 54%;
+	}
+	nav.jr-navbar {
+		background-color: #3C8FBE;
+		position: inherit;
+		z-index: -1;
+		top: 67px;
+		text-align: right;
+		/*padding: 10.4pt 16%;*/
+		padding: 5px 17.8%;
+		width: 100%;
+		/*border-bottom: 21px solid #fff;*/
+	}
+	nav.jr-navbar > ul {
+		margin-bottom: 2px;
+	}
+	nav.jr-navbar > ul > li.menu-itens {
+		list-style: none;
+		display: inline-block;
+		margin: 0 15px;
+	}
+	nav.jr-navbar > ul > li.menu-itens:first-of-type {
+		margin-left: 0;
+	}
+	nav.jr-navbar > ul > li.menu-itens:last-of-type {
+		margin-right: 0px;
+	}
+	li.menu-itens > a {
+		text-decoration: none;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	li.menu-itens > a:hover {
+		/*border-bottom: 2px solid #1E253A;*/
+		color: #1E253A;
+		transition: all 0s;
+		-moz-transition: all 0s; /* Firefox 4 */
+		-webkit-transition: all 0s; /* Safari and Chrome */
+		-o-transition: all 0s; /* Opera */
+	}
+
+	.navbar-large {
+		padding: 20px 17.8%!important;
+		top: 0!important;
+	}
+	.logo-large {
+		top: 0!important;
+	}
+	.logo-large > a > img {
+		width: 35%!important;
+	}
+
+	header,nav, a, img, li{
+		transition: all .5s ease;
+		-moz-transition: all .5s ease; /* Firefox 4 */
+		-webkit-transition: all .5s ease; /* Safari and Chrome */
+		-o-transition: all .5s ease; /* Opera */
+	}
+
+/*########################### FOOTER ###################################*/
+
+	footer {
+		height: 101px;
+		background-color: #1E253A;
+		position: relative;
+		top: 150px;
+		padding: 10px 240px;
+		color: #fff;
+		/*line-height: 1;*/
+	}
+
+	footer, footer a, footer a:visited {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	footer a:hover {
+		color: #3C8FBE;
+		text-decoration: none;
+	}
+
+	.fa {
+		font-size: 40px;
+	}
+	
+	#dados-contato {
+		margin: 10px 0;
+	}
+
+	#social-links {
+		text-align: right;
+		margin: 10px 0;
+	}
+
+	#social-links a {
+		margin: 0 3px;
+	}
+
+/*####################### CORPO PRINCIPAL ##############################*/
+
+	div.wrapper {
+		width: 100%;
+		display: inline-block;
+	}
+	div.inner-wrapper {
+		top: 200px;
+		float: none!important;
+		margin: 0 auto;
+	}
+	div.inner-wrapper > section {
+		min-height: 470px;
+		border-bottom: 1px solid #1E253A;
+		padding-bottom: 50px;
+		margin-bottom: 50px;
+	}
+	div.inner-wrapper > section:last-of-type {
+		border: none;
+	}
+
+/*###################### FORMULARIOS ###################################*/
+
+	#contato h1 {
+		margin-bottom: 20px;
+	}
+	label {
+		width: 29%;
+	}
+	input, textarea {
+		width: 70%;
+		margin-bottom: 15px;
+		height: 40px;
+		border: none;
+		background-color: #ccc;
+		padding: 10px;
+	}
+	#email {
+		box-shadow: none!important;
+	}
+	input[type="submit"] {
+		position: relative;
+		width: 125px;
+		left: calc(100% - 130px);
+		color: #fff;
+		background-color: #1E253A;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	input[type="submit"]:hover {
+		box-shadow: 0px 0px 10px #000 inset;
+	}
+	input[type="submit"]:focus {
+		outline: none;
+	}
+	.form-error {
+		text-transform: uppercase;
+		text-align: right;
+		color: #CD0000;
+		position: relative;
+		right: 5px;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	#thanks {
+		position: relative;
+  		height: 393px;
+	}
+	#thanks img {
+		position: absolute;
+	}
+	#thank-txt {
+		text-align: center;
+		position: relative;
+		top: 100px;
+		width: 915px;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
