@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('li.menu-itens > a').click(function(){
+		$(this).blur();
 		$('html, body').animate({
 		    scrollTop: $( $.attr(this, 'href') ).offset().top - 110
 		}, 500);
@@ -42,6 +43,8 @@ $(document).ready(function() {
       			$('.info-container').hide().html('<div class="info-img loco"><img style="margin-right:15px;" src="img/parceiros/locomotiva-logo.png"></div><p class="locojr">Confira os trabalhos em<br><a href="http://locomotivartv.weebly.com" target="_blank"><i class="fa fa-external-link"></i></a><a target="_blank" href="https://www.facebook.com/locomotivartv"><i class="fa fa-facebook-square"></i></a><a target="_blank" href="https://www.youtube.com/user/LocomotivaJr"><i class="fa fa-youtube-square"></i></a><a href="mailto:locomotiva@faac.unesp.br"><i class="fa fa-envelope-o"></i></a></p>').fadeIn('fast');
       		else if ($(this).data('partner') == 'interage')
       			$('.info-container').hide().html('<div class="info-img interage"><img style="margin-right:15px;" src="img/parceiros/interage-logo.png"></div><p class="interagejr">Confira os trabalhos em<br><a href="http://interagejr.com.br/" target="_blank"><i class="fa fa-external-link"></i></a><a target="_blank" href="https://www.facebook.com/interage.empresajunior"><i class="fa fa-facebook-square"></i></a><a href="mailto:interagejr@yahoo.com.br"><i class="fa fa-envelope-o"></i></a></p>').fadeIn('fast');
+      		else if ($(this).data('partner') == 'lotusjr')
+      			$('.info-container').hide().html('<div class="info-img lotus"><img style="margin-right:15px;" src="img/parceiros/lotusjr-logo.png"></div><p class="lotusjr">Confira os trabalhos em<br><a target="_blank" href="https://www.facebook.com/lotusjr"><i class="fa fa-facebook-square"></i></a><a href="mailto:lotus.jr@outlook.com"><i class="fa fa-envelope-o"></i></a></p>').fadeIn('fast');
      	},
      	function () {
       		$(this).prev("li").removeClass("nearby");
@@ -170,15 +173,30 @@ $(document).ready(function() {
 }); 
 
 // função que muda o menu, de acordo com a posição y da página
-$(document).scroll(function() {
-	if ($(document).scrollTop() > 90) {
-		$('.jr-navbar').addClass('navbar-large');
-		$('.logo-img').addClass('logo-large');
-	} else {
-		$('.jr-navbar').removeClass('navbar-large');
-		$('.logo-img').removeClass('logo-large');
-	}
-});
+if ($(window).width() > 769) {
+	$(document).scroll(function() {
+		if ($(document).scrollTop() > 90) {
+			$('.jr-navbar').addClass('navbar-large');
+			$('.logo-img').addClass('logo-large');
+		} else {
+			$('.jr-navbar').removeClass('navbar-large');
+			$('.logo-img').removeClass('logo-large');
+		}
+	});
+} else {
+	$('.jr-navbar').addClass('navbar-large');
+	$('.logo-img').addClass('logo-large');
+}
+
+// contagem de caracteres
+function countChar(val) {
+    var len = val.value.length;
+    if (len >= 4000) {
+      val.value = val.value.substring(0, 4000);
+    } else {
+      $('#charNum span').text(4000 - len);
+    }
+}
 
 // função que faz validação
 function validate(field_value, id_value) {

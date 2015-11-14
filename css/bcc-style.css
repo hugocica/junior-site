@@ -37,32 +37,49 @@
 		z-index: -1;
 		top: 67px;
 		text-align: right;
-		/*padding: 10.4pt 16%;*/
 		padding: 5px 17.8%;
 		width: 100%;
-		/*border-bottom: 21px solid #fff;*/
+		min-height: 0!important;
+		border: none!important;
+		border-radius: 0!important;
 	}
-	nav.jr-navbar > ul {
+	.navbar-default {
+		border-color: transparent;
+	}
+	nav.jr-navbar div.collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	nav.jr-navbar ul {
 		margin-bottom: 2px;
+		float: right;
 	}
-	nav.jr-navbar > ul > li.menu-itens {
+	nav.jr-navbar ul > li.menu-itens {
 		list-style: none;
 		display: inline-block;
-		margin: 0 15px;
+		margin: 0 5px;
 	}
-	nav.jr-navbar > ul > li.menu-itens:first-of-type {
+	nav.jr-navbar ul > li.menu-itens:first-of-type {
 		margin-left: 0;
 	}
-	nav.jr-navbar > ul > li.menu-itens:last-of-type {
+	nav.jr-navbar ul > li.menu-itens:first-of-type a {
+		padding-left: 0;
+	}
+	nav.jr-navbar ul > li.menu-itens:last-of-type {
 		margin-right: 0px;
+	}
+	nav.jr-navbar ul > li.menu-itens:last-of-type a {
+		padding-right: 0;
 	}
 	li.menu-itens > a {
 		text-decoration: none;
 		color: #fff;
 		text-transform: uppercase;
 		font-size: 18px;
+		padding-top: 0!important;
+		padding-bottom: 0!important;
 	}
-	li.menu-itens > a:hover {
+	li.menu-itens a:hover {
 		/*border-bottom: 2px solid #1E253A;*/
 		color: #1E253A;
 		transition: all 0s;
@@ -173,6 +190,10 @@
 		background-color: #ccc;
 		padding: 10px;
 	}
+	input:focus, textarea:focus, select:focus {
+		outline: none;
+		box-shadow: 0 0 15px #ccc;
+	}
 	textarea {
 		resize: none;
 	}
@@ -219,6 +240,12 @@
 		text-transform: uppercase;
 		font-size: 18px;
 	}
+	#charNum {
+		text-align: right;
+		padding: 0 10px;
+		margin-bottom: 20px;
+		font-weight: 900;
+	}
 
 	/*###################### SEÇÃO PARCEIROS - DOCK ###########################*/
 
@@ -256,7 +283,6 @@
 	}
 	.info-img.loco img {
 		min-width: 235px;
-		width: 100%;
 	}
 	.info-container .dijr a {
 		color: #002A3E;
@@ -266,6 +292,9 @@
 	}
 	.info-container .interagejr a {
 		color: #009F62;
+	}
+	.info-container .lotusjr a {
+		color: #0D911F;
 	}
 	.info-container a {
 		margin: 0 2px;

@@ -1,7 +1,11 @@
 	body {
-		font-family: 'Arvo';
+		font-family: 'Roboto';
 		font-size: 14px;
 		position: relative;
+		/*background-color: #EEE;*/
+	}
+	h1, h2, h3, h4, h5, h6, footer p, header {
+		font-family: 'Arvo';
 	}
 	p {
 		letter-spacing: .3pt;
@@ -12,7 +16,7 @@
 
 /*#####################  BARRA DE NAVEGAÇÃO #########################*/
 
-	div.top-navbar {
+	header.top-navbar {
 		position: fixed;
 		z-index: 9999;
 	}
@@ -22,6 +26,7 @@
 		left: calc(20% - 30px);
 		display: inline-block;
 		float: left;
+		cursor: pointer;
 	}
 	div.logo-img > a > img {
 		width: 54%;
@@ -35,29 +40,44 @@
 		/*padding: 10.4pt 16%;*/
 		padding: 5px 17.8%;
 		width: 100%;
-		/*border-bottom: 21px solid #fff;*/
+		min-height: 0!important;
+		border: none!important;
+		border-radius: 0!important;
 	}
-	nav.jr-navbar > ul {
+	nav.jr-navbar div.collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	nav.jr-navbar ul {
 		margin-bottom: 2px;
+		float: right;
 	}
-	nav.jr-navbar > ul > li.menu-itens {
+	nav.jr-navbar ul > li.menu-itens {
 		list-style: none;
 		display: inline-block;
-		margin: 0 15px;
+		margin: 0 5px;
 	}
-	nav.jr-navbar > ul > li.menu-itens:first-of-type {
+	nav.jr-navbar ul > li.menu-itens:first-of-type {
 		margin-left: 0;
 	}
-	nav.jr-navbar > ul > li.menu-itens:last-of-type {
+	nav.jr-navbar ul > li.menu-itens:first-of-type a {
+		padding-left: 0;
+	}
+	nav.jr-navbar ul > li.menu-itens:last-of-type {
 		margin-right: 0px;
+	}
+	nav.jr-navbar ul > li.menu-itens:last-of-type a {
+		padding-right: 0;
 	}
 	li.menu-itens > a {
 		text-decoration: none;
 		color: #fff;
 		text-transform: uppercase;
 		font-size: 18px;
+		padding-top: 0!important;
+		padding-bottom: 0!important;
 	}
-	li.menu-itens > a:hover {
+	li.menu-itens a:hover {
 		/*border-bottom: 2px solid #1E253A;*/
 		color: #1E253A;
 		transition: all 0s;
@@ -135,7 +155,7 @@
 		margin: 0 auto;
 	}
 	div.inner-wrapper > section {
-		min-height: 470px;
+		min-height: 342px;
 		border-bottom: 1px solid #1E253A;
 		padding-bottom: 50px;
 		margin-bottom: 50px;
@@ -143,16 +163,24 @@
 	div.inner-wrapper > section:last-of-type {
 		border: none;
 	}
+	div.description-txt {
+		margin-top: 40px;
+	}
 
 /*###################### FORMULARIOS ###################################*/
 
-	#contato h1 {
+	#contato h2 {
 		margin-bottom: 20px;
+	}
+	#processo-seletivo h2 {
+		margin-bottom: 50px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid;
 	}
 	label {
 		width: 29%;
 	}
-	input, textarea {
+	input, textarea, select {
 		width: 70%;
 		margin-bottom: 15px;
 		height: 40px;
@@ -160,10 +188,14 @@
 		background-color: #ccc;
 		padding: 10px;
 	}
+	textarea {
+		resize: none;
+	}
 	#email {
 		box-shadow: none!important;
 	}
 	input[type="submit"] {
+		font-family: 'Arvo';
 		position: relative;
 		width: 125px;
 		left: calc(100% - 130px);
@@ -201,4 +233,180 @@
 		width: 915px;
 		text-transform: uppercase;
 		font-size: 18px;
+	}
+
+	/*###################### SEÇÃO PARCEIROS - DOCK ###########################*/
+
+	section#parceiros {
+		padding-bottom: 0!important;
+		text-align: center;
+	}
+	section#parceiros h2 {
+		text-align: left;
+	}
+	.info-partners {
+		height: 154px;
+		margin-top: 35px;
+		min-height: 92px;
+		padding: 10px 55px;
+		text-align: center;
+		background-color: #eee;
+		border-radius: 15px;
+		border: 1px solid;
+		display: inline-block;
+		text-transform: uppercase;
+		width: 85%;
+	}
+	.info-container p {
+		margin: 45px 0;
+		float: right;
+		width: 45%;
+	}
+	.info-img {
+		float: left;
+		width: 50%;
+	}
+	.info-img.di img {
+		min-width: 235px;
+	}
+	.info-img.loco img {
+		min-width: 235px;
+		width: 100%;
+	}
+	.info-container .dijr a {
+		color: #002A3E;
+	}
+	.info-container .locojr a {
+		color: #EF3E3E;
+	}
+	.info-container .interagejr a {
+		color: #009F62;
+	}
+	.info-container a {
+		margin: 0 2px;
+	}
+	.info-container .fa {
+		font-size: 35px;
+	}
+	.info-container .fa-external-link {
+		position: relative;
+		top: 2px;
+	}
+	.listing-partners {
+		position: relative;
+  		top: 2px;
+	}
+	#osxdock-page {
+	    color: #fff;
+	    padding-bottom: 2em;
+	    margin-bottom: -2em;
+	}
+	#osxdock-page h1,#osxdock-page h2 {
+	    color: #fff;
+	}
+	div.cap {
+	    display: block;
+	    height: 100px;
+	    width: 40px;
+	    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/151734/dock-background-left.png) bottom left no-repeat;
+	}
+	div.cap.left {
+	    position: absolute;
+	    bottom: 0px;
+	    left: 0px;
+	}
+	div.cap.right {
+	    background-position: right bottom;
+	    position: absolute;
+	    top: 0px;
+	    right: 0px;
+	}
+	ul.osx-dock {
+	    display: inline-block;
+	    height: 130px;
+	    padding: 0 40px 0 0;
+	    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/151734/dock-background-left.png) no-repeat right bottom;
+	    overflow: hidden;
+	    margin: 0 0 0 40px;
+	}
+	ul.osx-dock li {
+	    display: block;
+	    position: relative;
+	    float: left;
+	    width: 50px;
+	    height: 50px;
+	    margin: 60px 8px 4px;
+	    -webkit-transition: 0.15s linear;
+	    -webkit-transition-property: -webkit-transform margin;
+	    text-align: center;
+	}
+	ul.osx-dock li a {
+	    display: block;
+	    height: 50px;
+	    padding: 0 1px;
+	    -webkit-transition: 0.15s linear;
+	    -webkit-transition-property: -webkit-transform margin;
+	    margin: 0;
+	    -webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.45,transparent),to(rgba(255,255,255,0.25)));
+	}
+	ul.osx-dock li a img {
+	    width: 48px;
+	}
+	ul.osx-dock li:hover {
+	    margin-left: 13px;
+	    margin-right: 13px;
+	    z-index: 200;
+	}
+	ul.osx-dock li:hover a {
+	    -webkit-transform-origin: center bottom;
+	    -webkit-transform: scale(1.5);
+	}
+	ul.osx-dock li.nearby {
+	    margin-left: 6px;
+	    margin-right: 6px;
+	    z-index: 100;
+	}
+	ul.osx-dock li.nearby a {
+	    -webkit-transform-origin: center bottom;
+	    -webkit-transform: scale(1.25);
+	}
+	ul.osx-dock li span {
+	    background: rgba(0,0,0,0.75);
+	    position: absolute;
+	    bottom: 80px;
+	    margin: 0 auto;
+	    display: none;
+	    width: auto;
+	    font-size: 11px;
+	    font-weight: bold;
+	    padding: 3px 6px;
+	    -webkit-border-radius: 6px;
+	    color: #fff;
+	}
+	ul.osx-dock li:hover span {
+	    display: block;
+	}
+	div#dockContainer {
+	    position: relative;
+	    bottom: 12px;
+	    height: 120px;
+	    padding: 50px 0 0;
+	    text-align: center;
+	    -webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+	    width: 100%;
+	    line-height: 1;
+	    z-index: 100;
+	}
+	div#dockWrapper {
+	    width: auto;
+	    display: inline-block;
+	    position: relative;
+	    /*border-bottom: solid 2px rgba(255,255,255,.35);*/
+	    line-height: 0;
+	}
+	#dockContainer,#dockContainer * {
+	    -webkit-box-sizing: content-box;
+	    -moz-box-sizing: content-box;
+	    box-sizing: content-box;
 	}

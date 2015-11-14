@@ -28,12 +28,6 @@
 				<option value="other">Outro (É compreensível...)</option>
 			</select>
 			<br>
-			<label for="sexo-candidato">Sexo</label>
-			<select name="sexo-candidato" id="sexo-candidato" >
-				<option value="masculino">Masculino</option>
-				<option value="feminino">Feminino</option>
-			</select>
-			<br>
 			<label for="resumo-candidato" style="vertical-align:top">Resumo de Atividades e Realizações</label>
 			<textarea name="resumo-candidato" id="resumo-candidato" style="height: 100px;"></textarea><br>
 

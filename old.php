@@ -6,11 +6,11 @@
 	</script>
 	
 	<section id="inicio">
-		<?php /*<div class="description-txt">
+		<div class="description-txt">
 			<br /><br />
 			<div id="processo-seletivo" align='center'><a href='processo-seletivo.php'><img src='img/processo_seletivo_alpha.png' style="width:100%;max-width:900px;"/></a></div>
 		</div>
-		<div class="slider"></div> */?>
+		<div class="slider"></div>
 	</section>
 
 	<section id="empresa">
@@ -96,9 +96,6 @@
 						<li data-partner="interage">
 							<a><img src="img/parceiros/interage-logo-small.png" alt="interage" /></a>
 						</li>
-						<li data-partner="lotusjr">
-							<a><img src="img/parceiros/lotusjr-logo-small.png" alt="lotusjr" /></a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -117,8 +114,7 @@
             <label class="lbl_formulario" for="empresa">Empresa/Instituição</label> 
             <input type="text" name="empresa" id="empresa" /> <br>
             <label class="lbl_formulario" for="mensagem" style="vertical-align:top">Mensagem*</label> 
-            <textarea onkeyup="countChar(this)" name="mensagem" id="mensagem" style="height: 100px;"></textarea> <br>
-            <div id="charNum"><span>4000</span> caracteres restantes</div>
+            <textarea name="mensagem" id="mensagem" style="height: 100px;"></textarea> <br>
              
             <input type="submit" name="send" id="send-form" value="Enviar" class="botao" />
         </form>   
